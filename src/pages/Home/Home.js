@@ -1,36 +1,27 @@
-import React, { useEffect, useState } from 'react'
-
+import React from 'react'
 import CardCharacter from './components/cardCharacter/CardCharacter'
 
 import "./Home.css"
 
-console.info(listCharacters)
+function Home(props) {
 
-function Home() {
-    const [ listCharacters, setListCharacters ] = useState([])
-
-    useEffect(() => {
-        fetch("https://rickandmortyapi.com/api/character")
-        .then((response) => response.json())
-        .then((data) => setListCharacters(data.results))
-        .catch((err) => console.info(err))
-    }, [])
-
-    console.info(listCharacters)
+    console.log(props.listCharacters)
 
   return (
-    <div className="Home">
+    <section className="Home">
         {
-            listCharacters.map((props) => {
+            props.listCharacters.map((props) => {
                 return <CardCharacter 
                     key={props.name} 
                     name={props.name} 
                     status={props.status} 
-                    image={props}
+                    image={props.image}
+                    location={props.location.name}
                 />
             })
         }
-    </div>
+    </section>
+
   );
 }
 

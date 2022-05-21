@@ -1,13 +1,14 @@
-import logo from './logo.svg';
-import Home from './pages/Home/Home' 
-
-
 import './App.css';
+import Header from './pages/Header/Header';
+import Filters from './pages/Home/components/Filters/Filters';
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Header/>
+      <main>
+        <Filters />
+      </main>
     </div>
   );
 }

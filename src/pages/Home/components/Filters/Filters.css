@@ -1,0 +1,62 @@
+.filters{
+    display: flex;
+    position: sticky;
+    top: -1px;
+    background-color: #110B5C;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: auto;
+    padding: 20px;
+}
+
+.filters select{
+    padding: 10px;
+    border-radius: 125px;
+    background:#00ADEE;
+    color: #000;
+    border-width: 0px;
+    font-size: large;
+    margin-left: 10px;
+}
+
+.filters option{
+    background-color: #fff;
+}
+
+.counters{
+    display: flex;
+}
+
+.counters div{
+    display: flex;
+    margin-right: 50px;
+}
+.counters h1{
+    margin: 0%;
+}
+
+.counters-icon{
+    padding-right: 4px;
+}
+
+
+hr{
+    max-width: 1400px;
+    height: 5px;
+    background: linear-gradient(90deg, rgba(0,173,238,1) 0%, rgba(32,232,0,1) 100%);
+    border-width: 0px;
+    border-radius: 50px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    display: flex;
+
+}
+
+.blue-light{
+    color: #00ADEE;
+}
+
+.pink{
+    color: #FF6EFF;
+}
