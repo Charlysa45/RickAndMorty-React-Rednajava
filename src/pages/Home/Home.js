@@ -5,14 +5,13 @@ import "./Home.css"
 
 function Home(props) {
 
-    console.log(props.listCharacters)
-
   return (
     <section className="Home">
         {
             props.listCharacters.map((props) => {
                 return <CardCharacter 
                     key={props.name} 
+                    id={props.id}
                     name={props.name} 
                     status={props.status} 
                     image={props.image}

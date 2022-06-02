@@ -1,0 +1,74 @@
+import React, { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
+import { faCircleLeft } from '@fortawesome/free-solid-svg-icons'
+import ApiService from '../../services/ApiService'
+
+import './Character.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+const Character = () => {
+
+   const {charId} = useParams()
+   
+
+   const [charInfo, setCharInfo] = useState([])
+
+   useEffect(() => {
+     ApiService.CharInfoService(charId)
+     .then(res => {
+        setCharInfo([res])
+        console.log(res)
+     })
+   }, [charId])
+   
+  return (
+    <>
+        <section className="filters">
+            <Link to='/' className='filters-backbtn'>
+                <FontAwesomeIcon icon={faCircleLeft}/>  Regresar
+            </Link>
+        </section>
+
+        <hr />
+
+        <section id='character-info'>
+            {
+                charInfo.map(res =>
+                    <div className="character-info-card">
+                        <img src={res.image} alt="character-img" className='character-info-card-img' />
+                            <div className='character-info-card-content'>
+                                <div className='character-info-card-content-top'>
+                                    <div>
+                                        <p className='character-info-card-content-key'>Name: </p>
+                                        <p className='character-info-card-content-value'>{res.name}</p>
+                                    </div>
+                                    <div>
+                                        <p className='character-info-card-content-key'>Status: </p>
+                                        <span className={`CardCharacter-status ${res.status}`}>{res.status}</span>
+                                    </div>
+                                </div>
+                                <div className='character-info-card-content-middle'>
+                                    <div>
+                                        <p className='character-info-card-content-key'>Location: </p>
+                                        <p className='character-info-card-content-value'>{res.location.name}</p>
+                                    </div>
+                                </div>
+                                <div className="character-info-card-content-bottom">
+                                    <div>
+                                        <p className='character-info-card-content-key'>Specie: </p>
+                                        <p className='character-info-card-content-value'>{res.species}</p>
+                                    </div>
+                                    <div>
+                                        <p className='character-info-card-content-key'>Origin: </p>
+                                        <p className='character-info-card-content-value'>{res.origin.name}</p>
+                                    </div>           
+                                </div>
+                            </div>
+                    </div>
+            )}
+        </section>
+    </>
+  )
+}
+
+export default Character

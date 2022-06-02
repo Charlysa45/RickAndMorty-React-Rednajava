@@ -9,12 +9,12 @@ const CharactersService = async() => {
     .then(response => response.data)
 }
 
-const LocationsService = async() => {
+const CharInfoService = async(charId) => {
     const request = axios
     return request
-    .get(`${apiUrl}/location`)
+    .get(`${apiUrl}/character/${charId}`)
     .then(response => response.data)
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default {CharactersService, LocationsService}
+export default {CharactersService, CharInfoService}

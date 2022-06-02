@@ -2,6 +2,7 @@ main{
     padding-bottom: 30px;
     background-color: #110B5C;
     color:#fff;
+    min-height: 79vh;
 }
 
 .Home {
