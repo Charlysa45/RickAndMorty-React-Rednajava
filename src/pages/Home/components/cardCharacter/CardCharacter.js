@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 import "./CardCharacter.css"
 
 function CardCharacter(props) {
   return (
-    <article className="CardCharacter">
+    <motion.article initial={{scale: 1.3}} animate={{scale: 1.0}} whileHover={{scale: 1.1}} whileTap={{scale: 1}} className="CardCharacter">
+
       <Link to={`character/${props.id}`}>
         <img src={props.image} alt={`${props.name}-img`} className='CardCharacter-img'/>
       </Link>
@@ -20,7 +22,7 @@ function CardCharacter(props) {
             <p className="CardCharacter-content-value">{props.location}</p>
           </div>
         </div>
-    </article>
+    </motion.article>
   );
 }
 
