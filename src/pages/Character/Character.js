@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { faCircleLeft } from '@fortawesome/free-solid-svg-icons'
 import ApiService from '../../services/ApiService'
+import { motion } from 'framer-motion'
 
 import './Character.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -34,7 +35,7 @@ const Character = () => {
         <section id='character-info'>
             {
                 charInfo.map(res =>
-                    <div className="character-info-card">
+                    <motion.article initial={{scale: 1.3}} animate={{scale: 1.0}} whileHover={{scale: 1.1}} whileTap={{scale: 1}} className="character-info-card">
                         <img src={res.image} alt="character-img" className='character-info-card-img' />
                             <div className='character-info-card-content'>
                                 <div className='character-info-card-content-top'>
@@ -64,7 +65,7 @@ const Character = () => {
                                     </div>           
                                 </div>
                             </div>
-                    </div>
+                    </motion.article>
             )}
         </section>
     </>
