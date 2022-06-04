@@ -4,8 +4,6 @@ import CardCharacter from './components/cardCharacter/CardCharacter'
 
 import "./Home.css"
 
-console.info(listCharacters)
-
 function Home() {
     const [ listCharacters, setListCharacters ] = useState([])
 
