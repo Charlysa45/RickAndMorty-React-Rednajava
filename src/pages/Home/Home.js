@@ -1,26 +1,23 @@
-import React from 'react'
-import CardCharacter from './components/cardCharacter/CardCharacter'
+import React from "react";
+import CardCharacter from "./components/cardCharacter/CardCharacter";
 
-import "./Home.css"
+import "./Home.css";
 
 function Home(props) {
-
   return (
     <section className="Home">
-        {
-            props.listCharacters.map((props) => {
-                return <CardCharacter 
-                    key={props.name} 
-                    id={props.id}
-                    name={props.name} 
-                    status={props.status} 
-                    image={props.image}
-                    location={props.location.name}
-                />
-            })
-        }
+      {props.listCharacters.map((character) => {
+        const data = {
+          key: character.name,
+          id: character.id,
+          name: character.name,
+          status: character.status,
+          image: character.image,
+          location: character.location.name,
+        };
+        return <CardCharacter data={data} />;
+      })}
     </section>
-
   );
 }
 
