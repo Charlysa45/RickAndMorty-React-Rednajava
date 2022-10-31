@@ -1,3 +1,51 @@
 .CardCharacter {
-    border: 1px solid #ccc;
+    background-color: #830499;
+    border-radius: 25px;
+}
+
+.CardCharacter-img{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 289px;
+}
+
+.CardCharacter-content{
+    padding-top: 10px; 
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.CardCharacter-status{
+    color: #000;
+    font-weight: 500;
+    border-radius: 25px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-top: 100%;
+}
+
+.CardCharacter-content p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 2px;
+}
+
+.CardCharacter-content-value{
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.Alive{
+    background-color: #62DB4E;
+}
+
+.Dead{
+    background-color: #DB000D;
+}
+
+.unknown{
+    background-color: #9c9c9c;
 }
