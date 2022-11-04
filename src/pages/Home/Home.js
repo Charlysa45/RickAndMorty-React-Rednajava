@@ -5,18 +5,19 @@ import "./Home.css";
 
 function Home(props) {
   return (
-    <section className="Home">
-      {props.listCharacters.map((character) => {
-        const data = {
-          key: character.name,
-          id: character.id,
-          name: character.name,
-          status: character.status,
-          image: character.image,
-          location: character.location.name,
-        };
-        return <CardCharacter data={data} />;
-      })}
+    <section id="Home">
+      <div id="cards-box">
+        {props.listCharacters.map((character) => {
+          const data = {
+            id: character.id,
+            name: character.name,
+            status: character.status,
+            image: character.image,
+            location: character.location.name,
+          };
+          return <CardCharacter key={character.id} data={data} />;
+        })}
+      </div>
     </section>
   );
 }

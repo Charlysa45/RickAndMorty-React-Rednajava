@@ -5,8 +5,10 @@ import { motion } from 'framer-motion';
 
 function Header() {
   return (
-      <header className='header'>
+      <header>
+        <div id='header-logo'>
           <motion.img animate={{scale:[1.5, 1], rotate:[720, 1440], zIndex: 1}} transition={{duration: 1.3}} src={headerLogo} alt="RM-Logo" id='header-img'/>
+        </div>
       </header>
 
   )

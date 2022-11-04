@@ -1,4 +1,4 @@
-.header{
+header{
     display: flex;
     justify-content: center;
     background-color: #830499;
@@ -7,6 +7,10 @@
     border-bottom: 4px solid #00ADEE;
 }
 
+#header-logo{
+    max-width: 600px;
+}
+
 #header-img{
-    width: 600px;
+    width: 100%;
 }

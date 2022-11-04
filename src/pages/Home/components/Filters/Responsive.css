@@ -1,0 +1,29 @@
+@media screen and (max-width: 970px) {
+    .filters{
+        justify-content: center;
+    }
+
+    .filters-selects{
+        justify-content: center;
+    }
+    
+    .filters select{
+        padding: 7px;
+        margin-bottom: 10px;
+    }
+
+    .filters option{
+        font-size: 17px;
+    }
+
+    .counters{
+        margin-top: 15px;
+    }
+
+    .counters div{
+        width: 180px;
+        justify-content: center;
+        margin-right: 0px;
+    }
+    
+}

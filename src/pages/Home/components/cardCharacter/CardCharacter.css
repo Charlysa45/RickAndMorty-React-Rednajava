@@ -6,7 +6,7 @@
 .CardCharacter-img{
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    width: 289px;
+    width: 100%;
 }
 
 .CardCharacter-content{

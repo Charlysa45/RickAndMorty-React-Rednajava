@@ -4,6 +4,7 @@ import { faMars, faVenus } from "@fortawesome/free-solid-svg-icons";
 import { getCharacters } from "../../../../services/ApiService";
 import Home from "../../Home";
 import "./Filters.css";
+import "./Responsive.css";
 
 const Filters = () => {
   const [listCharacters, setListCharacters] = useState([]);
