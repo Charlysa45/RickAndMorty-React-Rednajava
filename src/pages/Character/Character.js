@@ -5,6 +5,7 @@ import { getCharactersInfo } from "../../services/ApiService";
 import { motion } from "framer-motion";
 
 import "./Character.css";
+import "./Responsive.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Character = () => {

@@ -1,0 +1,16 @@
+@media screen and (max-width: 780px) {
+  .character-info-card {
+    display: block;
+    width: 350px;
+  }
+
+  .character-info-card-img {
+    border-bottom-left-radius: 0%;
+    border-top-right-radius: 50px;
+    width: 100%;
+  }
+
+  .character-info-card-content-bottom {
+    justify-content: center;
+  }
+}
