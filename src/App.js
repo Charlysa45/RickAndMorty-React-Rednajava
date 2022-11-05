@@ -12,7 +12,7 @@ function App() {
         <Router>
           <Routes>
             <Route index element={<Filters />}/>
-            <Route path="character/:charId" element={<Character />}/>
+            <Route path="character/:characterId" element={<Character />}/>
           </Routes>
         </Router>
       </main>
